@@ -1,0 +1,15 @@
+/* body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+.dataframe{
+    border-collapse: collapse; 
+    border: 1px solid silver;
+}
+
+.dataframe td, th {
+    padding: 5px;
+}
+
+.dataframe tr:nth-child(even) {
+    background: whitesmoke;
+}
