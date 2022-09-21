@@ -21,6 +21,19 @@ def scrape_mars():
     data_dict['news_title'] = news_title
     data_dict['news_body'] = news_body
 
+    # FEATURED IMAGE SCRAPE
+    fmi = 'https://spaceimages-mars.com/'
+    # Setup splinter
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)
+    browser.visit(fmi)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    image = soup.find('img', class_="headerimage")['src']
+    featured_image_url = f'{fmi}{image}'
+    browser.quit()
+    
+    data_dict['featured_image'] = featured_image_url
 
     # MARS FACTS SCRAPE
     mf = 'https://galaxyfacts-mars.com/'

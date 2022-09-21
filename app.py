@@ -13,14 +13,14 @@ db = client.mars
 @app.route("/")
 def index():
     data = db.mars_data.find_one()
-    news_title = data['news_title']
-    news_body = data['news_body']
-    facts = data['mars_facts_html']
-    hemispheres = data['mars_hemispheres']
+    # news_title = data['news_title']
+    # news_body = data['news_body']
+    # featured_image_url = data['featured_image']
+    # facts = data['mars_facts_html']
+    # hemispheres = data['mars_hemispheres']
 
-    return render_template("index.html", mars_facts=facts, title=news_title, body=news_body, hemispheres=hemispheres)
-    
-
+    # return render_template("index.html", mars_facts=facts, title=news_title, body=news_body, featured_image_url=featured_image_url, hemispheres=hemispheres)
+    return render_template("index.html",data=data)
 @app.route("/scrape")
 def scraper():
     data_dict = scrape.scrape_mars()
