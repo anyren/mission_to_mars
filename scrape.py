@@ -47,7 +47,7 @@ def scrape_mars():
 
     # HEMISPHERE SCRAPE
     mh = 'https://marshemispheres.com/cerberus.html'
-
+    #ran out of time/energy to figure out how to scrape the URLS so just hardcoding for now
     data_dict['mars_hemispheres']  = [
     {"title": "Valles Marineris Hemisphere", "img_url": "https://marshemispheres.com/images/b3c7c6c9138f57b4756be9b9c43e3a48_valles_marineris_enhanced.tif_full.jpg"},
     {"title": "Cerberus Hemisphere", "img_url": "https://marshemispheres.com/images/f5e372a36edfa389625da6d0cc25d905_cerberus_enhanced.tif_full.jpg"},
